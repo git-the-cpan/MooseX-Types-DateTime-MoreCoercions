@@ -1,5 +1,9 @@
 Revision history for MooseX-Types-DateTime-MoreCoercions
 
+0.15      2015-08-16 01:13:14Z
+        - bump namespace::clean prereq to guarantee needed Package::Stash
+          interfaces
+
 0.14      2014-08-06 06:04:21Z
         - re-release to remove README.pod from shipped dist
 

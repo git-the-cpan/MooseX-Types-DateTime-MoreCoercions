@@ -1,13 +1,10 @@
 use strict;
 use warnings;
-package MooseX::Types::DateTime::MoreCoercions;
-BEGIN {
-  $MooseX::Types::DateTime::MoreCoercions::AUTHORITY = 'cpan:ILMARI';
-}
-# git description: v0.13-2-g38c0d44
-$MooseX::Types::DateTime::MoreCoercions::VERSION = '0.14';
+package MooseX::Types::DateTime::MoreCoercions; # git description: v0.14-7-g4f9a1ca
 # ABSTRACT: Extensions to L<MooseX::Types::DateTime>
 # KEYWORDS: moose types constraints coercions date time datetime timestamp
+
+our $VERSION = '0.15';
 
 use Moose 0.41 ();
 use DateTime 0.4302 ();
@@ -16,7 +13,7 @@ use DateTimeX::Easy 0.085 ();
 use Time::Duration::Parse 0.06 qw(parse_duration);
 use MooseX::Types::DateTime 0.07 ();
 use MooseX::Types::Moose 0.04 qw/Num HashRef Str/;
-use namespace::clean 0.08;
+use namespace::clean 0.19;
 
 use MooseX::Types 0.04 -declare => [qw( DateTime Duration)];
 use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
@@ -51,7 +48,7 @@ MooseX::Types::DateTime::MoreCoercions - Extensions to L<MooseX::Types::DateTime
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 
@@ -131,30 +128,11 @@ Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>
 
 =back
 
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2008 by John Napiorkowski.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =head1 CONTRIBUTORS
 
-=for stopwords Dagfinn Ilmari Mannsåker Evan Carroll Karen Etheridge gregor herrmann root
+=for stopwords Karen Etheridge Evan Carroll gregor herrmann
 
 =over 4
-
-=item *
-
-Dagfinn Ilmari Mannsåker <ilmari@photobox.com>
-
-=item *
-
-Evan Carroll <me+cpan@evancarroll.com>
-
-=item *
-
-Evan Carroll <me@evancarroll.com>
 
 =item *
 
@@ -162,12 +140,19 @@ Karen Etheridge <ether@cpan.org>
 
 =item *
 
-gregor herrmann <gregoa@debian.org>
+Evan Carroll <me+cpan@evancarroll.com>
 
 =item *
 
-root <root@x60s.(none)>
+gregor herrmann <gregoa@debian.org>
 
 =back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2008 by John Napiorkowski.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
